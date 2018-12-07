@@ -1,6 +1,9 @@
 <template>
-    <div>
-        {{ name }} - {{ description }}
+    <div class="skill-item">
+        {{ name }} 
+        <div v-for="(bullet, index) in bullets" :key="index">
+            <div> {{ bullet }} </div>
+        </div>
     </div>
 </template>
 
@@ -10,10 +13,13 @@ export default {
     name: 'skill-item',
     props: {
         name: String,
-        description: String,
+        bullets: Array
     }
 }
 </script>
 
-<style>
+<style scoped>
+    .skill-item {
+        border: 1px solid black;
+    }
 </style>

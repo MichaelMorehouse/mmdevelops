@@ -2,24 +2,29 @@
   <div id="app">
     <navigation-bar class="item1"></navigation-bar>
     <page-header class="item2"></page-header>
-    <skill-body class="item3"></skill-body>
+    <div class="item3">
+      <skill-container></skill-container>
+      <contact-container></contact-container>
+    </div>
     <page-footer class="item4"></page-footer>
   </div>
 </template>
 
 <script>
-import SkillBody from './components/SkillBody.vue'
+import SkillContainer from './components/SkillContainer.vue'
 import PageHeader from './components/layout/PageHeader.vue'
 import PageFooter from './components/layout/PageFooter.vue'
 import NavigationBar from './components/ui/NavigationBar.vue'
+import ContactContainer from './components/ContactContainer.vue'
 
 export default {
   name: 'app',
   components: {
-    SkillBody,
+    SkillContainer,
     PageHeader,
     PageFooter,
-    NavigationBar
+    NavigationBar,
+    ContactContainer
   }
 }
 </script>
@@ -45,13 +50,12 @@ html, body {
 
 #app {
   display: grid;
-  height: 100%;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: auto;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
-    'nav nav nav'
-    'header header header'
-    'main main main'
-    'footer footer footer';
+    'nav'
+    'header'
+    'main'
+    'footer';
 }
 </style>

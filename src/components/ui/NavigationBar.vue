@@ -1,10 +1,8 @@
 <template>
-    <div id="navigation-bar-top">
-        <ul>
-            <li><a href='/'>MMM</a></li>
-            <li><a href='#skills'>Skills and Projects</a></li>
-            <li><a href='#contact'>Contact Me</a></li>
-        </ul>
+    <div id="navbar-container" class="navbar-top">
+        <div class="home-item"><a href='/'>MMM</a></div>
+        <div><a href='#skills'>Skills and Projects</a></div>
+        <div class="navitem-right"><a href='#contact'>Contact Me</a></div>
     </div>
 </template>
 
@@ -19,45 +17,47 @@ export default {
 </script>
 
 <style scoped>
-    #navigation-bar-top {
+
+    .navbar-top {
         position: sticky;
         top: 0;
     }
 
-    ul {
-        list-style-type: none;
+    #navbar-container {
+        display: flex;
+        background-color: rgb(44, 62, 80);
+        align-items: baseline;
+    }
+
+    #navbar-container > div{
+        float: left;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: seagreen;
         box-shadow: 0px 4px 2px -2px rgb(100, 100, 100, .4);
     }
 
-    li {
-        margin: 4px;
-        float: left;
+    #navbar-container > div.navitem-right {
+        margin-left: auto;
     }
 
-    li a {
+    #navbar-container > div.home-item {
+        font-size: 1.2em;
+    }
+
+    a {
+        margin: 8px 4px;
         display: block;
         color: white;
         text-align: center;
         padding: 10px 14px;
         text-decoration: none;
+        border-radius: 2px;
         transition: 0.15s background-color linear;
     }
 
-    .active {
-        background-color: rgb(40, 95, 145, .9);
-        border: 2px rgb(0, 0, 50, .8) solid;
-    }
-
-    li a:hover:not(.active) {
+    a:hover {
         background-color: rgb(40, 95, 145, 0.5);
-        border: 2px rgb(0, 0, 50, .8) solid;
     }
 
-    li a:not(.active) {
-        border: 2px rgb(0, 0, 50, .5) solid;
-    }
 </style>

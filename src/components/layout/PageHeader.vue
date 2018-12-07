@@ -14,13 +14,15 @@ export default {
 
 <style>
     header {
-        background-color: rgb(39, 197, 39, 0.8);
-        align-items: center;
+        background-color: rgba(45, 100, 45, 0.9);
+        color: white;
+        align-content: center;
+        text-align: center;
     }
 
     .splash-image {
         display: block;
         margin: auto;
-        padding: 10px;
+        padding-top: 30px;
     }
 </style>
