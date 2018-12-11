@@ -3,6 +3,7 @@
     <navigation-bar class="item1"></navigation-bar>
     <page-header class="item2"></page-header>
     <div class="item3">
+      <about-me-container></about-me-container>
       <skill-container></skill-container>
       <contact-container></contact-container>
     </div>
@@ -16,14 +17,16 @@ import PageHeader from './components/layout/PageHeader.vue'
 import PageFooter from './components/layout/PageFooter.vue'
 import NavigationBar from './components/ui/NavigationBar.vue'
 import ContactContainer from './components/ContactContainer.vue'
+import AboutMeContainer from './components/AboutMeContainer.vue'
 
 export default {
   name: 'app',
   components: {
-    SkillContainer,
     PageHeader,
     PageFooter,
     NavigationBar,
+    AboutMeContainer,
+    SkillContainer,
     ContactContainer
   }
 }
@@ -34,6 +37,7 @@ html, body {
     margin: 0px;
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

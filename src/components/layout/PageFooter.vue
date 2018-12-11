@@ -1,9 +1,8 @@
 <template>
     <footer>
         <div>
-            <div>Built with Vue.js</div>
+            <div>Built with love and <a href="https://vuejs.org/" target="_blank">Vue.js</a></div>
             <div>Copyright &copy; Michael M Miller 2018</div>
-            
         </div>
     </footer>
 </template>
@@ -19,7 +18,16 @@ export default {
         text-align: right;
         background-color: rgb(44, 62, 80);
         color: white;
-        padding: 5px;
+        padding: 10px;
         border-top: 1px rgb(100, 100, 100, .4) solid;
     }
+
+    footer > div > div:not(:last-child) {
+        padding-bottom: 5px;
+    }
+
+    footer a {
+        color: white;
+    }
+
 </style>
