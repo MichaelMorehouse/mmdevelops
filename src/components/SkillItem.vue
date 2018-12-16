@@ -1,24 +1,10 @@
 <template>
-    <div class="skill-item" v-on:click="$emit('activate-skill')">
+    <div class="skill-item" v-on:click="$emit('activate-skill')" :class="isActive ? 'active-skill' : ''">
         <div>
-            <div>
-                {{ skill.name }}
-                <transition name="fade" mode="out-in">
-                    <span v-if="!isActive" class="toggle-skill-icon">
-                        <font-awesome-icon :icon="['fas','plus']" key="plus"></font-awesome-icon>
-                    </span>
-                    <span v-else class="toggle-skill-icon">
-                        <font-awesome-icon :icon="['fa','minus']" key="minus"></font-awesome-icon>
-                    </span>
-                </transition>
+            <div class="skill-title">{{ skill.name }}</div>
+            <div v-if="skill.icon">
+                <img class="skill-icon" :src="require('@/assets/' + skill.icon)" alt="I'm missing!" >
             </div>
-            <transition name="slide-fade">
-                <div v-if="isActive">
-                    <div v-for="(bullet, index) in skill.bullets" :key="index">
-                        <div> {{ bullet }} </div>
-                    </div>
-                </div>
-            </transition>
         </div>
     </div>
 </template>
@@ -29,48 +15,65 @@ export default {
     name: 'skill-item',
     data: function() {
         return {
-            isActive: false
         }
     },
     props: {
         skill: {
             name: String,
             bullets: Array,
-        }
+        },
+        isActive: Boolean
     },
-    methods: {
-        toggleActive: function() {
-            return this.isActive = !this.isActive
-        }
-    }
 }
 </script>
 
-<style scoped>
+<style>
+
     .skill-item {
-        border: 1px solid black;
-        border-radius: 8px 0 0 0;
+        padding: 10px 10px;
+        border: 1px solid  rgb(44, 62, 80, .4);
+        border-radius: 2px 2px 10px 2px;
+        -webkit-box-shadow: 1px 1px 0px 0px rgba(44, 62, 80, 0.4);
+        -moz-box-shadow:    1px 1px 0px 0px rgba(44, 62, 80, 0.4);
+        box-shadow:         1px 1px 0px 0px rgba(44, 62, 80, 0.4);
     }
 
-    .toggle-skill-icon {
-        float: right;
+    .skill-item:hover {
+        border-color: rgb(44, 62, 80, .6); 
+        cursor: pointer;
+        -webkit-box-shadow: 1px 2px 1px 0px rgba(44, 62, 80, 0.6);
+        -moz-box-shadow:    1px 2px 1px 0px rgba(44, 62, 80, 0.6);
+        box-shadow:         1px 2px 1px 0px rgba(44, 62, 80, 0.6);
     }
 
-    .slide-fade-enter-active {
-        transition: all .3s ease;
-    }
-    .slide-fade-leave-active {
-        transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-    }
-    .slide-fade-enter, .slide-fade-leave-to {
-        transform: translateX(10px);
-        opacity: 0;
+    .skill-item:not(.active-skill):hover {
+        border-color: rgb(44, 62, 80);
     }
 
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
+    /* Skill title styles */
+    .skill-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        border-bottom: 1px solid  rgb(44, 62, 80);
+        min-height: 45px;
     }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0;
+
+    /* Skill icon styles */
+
+    .skill-icon {
+        max-width: 70%;
+        padding: 20px 10px;
+        opacity: .5;
     }
+
+    .skill-item:not(.active-skill):hover .skill-icon {
+        opacity: .8;
+    }
+
+    .active-skill .skill-icon {
+        opacity: 1;
+    }
+    
 </style>

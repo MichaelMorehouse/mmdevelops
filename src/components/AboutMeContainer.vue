@@ -3,10 +3,20 @@
         <h2 class="text-uppercase">About Me</h2>
         <div class="about-grid">
             <div class="col-one">
-                <span class="leadin-text">Lorem ipsum dolor amet</span> copper mug portland roof party, pariatur meggings knausgaard in selfies letterpress fingerstache poutine plaid pickled tumeric yr. La croix meggings franzen commodo beard. Nostrud adaptogen jianbing, hexagon chambray cloud bread celiac dreamcatcher skateboard salvia kitsch fashion axe laborum shoreditch. Gluten-free before they sold out incididunt schlitz est laboris cliche shoreditch chicharrones kickstarter green juice excepteur butcher.
+                <p>
+                    <span class="leadin-text">Scientist. Technologist. Lifelong learner.</span>
+                    These titles give a sense of my passions. I live to develop novel solutions, learn from my colleagues and share my expertise.
+    
+                </p>
+                <p>
+                    Working as an analytical chemist taught me the importance of creative problem solving, iterative process improvement, and the vital importance documentation.
+                </p>
             </div>
             <div class="col-two">
-                Marfa put a bird on it migas craft beer, keffiyeh blue bottle typewriter deep v enamel pin est 8-bit ramps pug occaecat excepteur. Et mollit portland cornhole, cardigan organic four dollar toast tbh celiac laboris. Qui slow-carb magna lorem pug hammock poke incididunt yuccie pariatur put a bird on it typewriter. Eiusmod four loko activated charcoal occaecat synth succulents vegan iPhone. Ut +1 organic listicle. Cold-pressed intelligentsia health goth enim.
+                <p>
+                    I am always learning and looking to contribute towards the effort at hand. Whether that involves rolling up my sleeves and getting to work, or helping coordinate between colleagues, I find it satisfying to help where I'm most needed.
+                </p>
+                <p>I also like to cook :3</p>
             </div>
         </div>
     </div>
@@ -22,7 +32,7 @@ export default {
     #about-me {
         color: rgb(44, 62, 80);
         text-align: center;
-        padding: 20px 10px;
+        padding: 20px 10%;
     }
 
     .leadin-text {
@@ -31,7 +41,7 @@ export default {
 
     .col-one { 
         grid-area: colone; 
-        border-right: 1px rgb(128, 128, 128, .5) solid;
+        border-right: 1px rgb(44, 62, 80, .5) solid;
     }
     .col-two { grid-area: coltwo; }
 
@@ -43,8 +53,8 @@ export default {
         ;
     }
 
-    .about-grid > div {
-        padding: 0 10px;
+    .about-grid>div {
+        padding: 0px 20px;
     }
 
 </style>

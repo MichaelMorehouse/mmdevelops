@@ -1,10 +1,8 @@
 <template>
     <div id="navbar-container" class="navbar-top">
         <div class="navbar-flex text-uppercase">
-            <div class="navitem home-item"><a href='#'>MMM</a></div>
-            <div class="navitem"><a href='#about-me'>About Me</a></div>
-            <div class="navitem"><a href='#skills'>Skills and Projects</a></div>
-            <div class="navitem navitem-right"><a href='#contact'>Connect</a></div>
+            <div id="nav-home" class="nav-item" v-on:click="scrollToTop">MMM</div>
+            <div id="nav-connect" v-on:click="scrollToTarget" targetId="connect" class="nav-item nav-item-right">Connect</div>
         </div>
     </div>
 </template>
@@ -15,14 +13,31 @@ export default {
     data: function() {
         return {
         }
+    },
+    methods: {
+        scrollToTop: function() {
+            window.scrollTo({
+                top: 0,
+                left: 0
+            })
+        },
+        scrollToTarget: function(event) {
+            document.getElementById(event.srcElement.attributes.targetId.value).scrollIntoView();
+        }
     }
 }
 </script>
 
-<style scoped>
+<style>
 
     #navbar-container {
-        display: inline;
+        display: block;
+        z-index: 1;
+    }
+
+    #nav-home {
+        font-size: 1.2em;
+        margin-left: 10px;
     }
 
     .navbar-top {
@@ -30,33 +45,24 @@ export default {
         top: 0;
     }
 
+@media screen and (max-width: 600px) {
+    .navbar-top {
+        position: relative;
+    }
+}
+
     .navbar-flex {
         display: flex;
         background-color: rgb(44, 62, 80);
         align-items: baseline;
     }
 
-    .navitem {
-        float: left;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        box-shadow: 0px 4px 2px -2px rgb(100, 100, 100, .4);
-    }
-
-    .navitem-right {
-        margin-left: auto;
-        margin-right: 10px;
-    }
-
-    .home-item {
-        font-size: 1.2em;
-        margin-left: 10px;
-    }
-
-    .navitem a {
+    /* Navigation item styles */
+    .nav-item {
         display: block;
-        margin: 15px 5px;
+        float: left;
+        overflow: hidden;
+        margin: 10px 5px;
         padding: 10px 14px;
         color: white;
         text-align: center;
@@ -65,7 +71,13 @@ export default {
         transition: 0.15s background-color linear;
     }
 
-    a:hover {
+    .nav-item-right {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .nav-item:hover {
+        cursor: pointer;
         background-color: rgb(40, 95, 145, 0.5);
     }
 

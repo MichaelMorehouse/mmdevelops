@@ -1,9 +1,7 @@
 <template>
     <footer>
-        <div>
-            <div>Built with love and <a href="https://vuejs.org/" target="_blank">Vue.js</a></div>
-            <div>Copyright &copy; Michael M Miller 2018</div>
-        </div>
+        <div>Built with care and <a href="https://vuejs.org/" target="_blank">Vue.js</a></div>
+        <div>Copyright &copy; Michael M Miller 2018</div>
     </footer>
 </template>
 
@@ -16,13 +14,13 @@ export default {
 <style>
     footer {
         text-align: right;
+        font-size: .7em;
         background-color: rgb(44, 62, 80);
         color: white;
         padding: 10px;
-        border-top: 1px rgb(100, 100, 100, .4) solid;
     }
 
-    footer > div > div:not(:last-child) {
+    footer>div:not(:last-child) {
         padding-bottom: 5px;
     }
 

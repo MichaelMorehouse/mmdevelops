@@ -1,0 +1,1 @@
+No scroll to skill spotlight if activeSkill had been empty

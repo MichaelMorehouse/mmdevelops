@@ -1,5 +1,5 @@
 <template>
-    <div id="contact">
+    <div id="connect">
         <h2 class="text-uppercase">Connect with Me</h2>
         <div>
             <a v-bind:href="linkedin" target="_blank">
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-    #contact {
+    #connect {
         color: white;
         background-color: rgb(44, 62, 80, .9);
         text-align: center;

@@ -47,6 +47,7 @@ html, body {
     text-transform: uppercase;
 }
 
+/* App grid styles */
 .item1 { grid-area: nav; }
 .item2 { grid-area: header; }
 .item3 { grid-area: main; }
@@ -62,4 +63,18 @@ html, body {
     'main'
     'footer';
 }
+
+/* Vue transition styles */
+.fade-enter-active {
+    transition: opacity .7s;
+}
+
+.fade-leave-active {
+  transition: opacity .4s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
 </style>
