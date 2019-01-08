@@ -1,17 +1,17 @@
 <template>
-  <div id="skill-spotlight">
-    <div id="skill-spotlight-title">{{ skill.name }}</div>
-    <div id="skill-bullet-container">
-      <div v-for="(bullet, index) in skill.bullets" :key="index" class="skill-bullet">{{ bullet }}</div>
+  <div id="project-spotlight">
+    <div id="project-spotlight-title">{{ project.name }}</div>
+    <div id="project-bullet-container">
+      <div v-for="(bullet, index) in project.bullets" :key="index" class="project-bullet">{{ bullet }}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "skill-spotlight",
+  name: "project-spotlight",
   props: {
-    skill: {
+    project: {
       name: String,
       bullets: Array
     }
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-#skill-spotlight {
+#project-spotlight {
   border: 1px solid rgb(44, 62, 80);
   margin: 20px;
   padding: 10px 0 20px 0;
@@ -30,7 +30,7 @@ export default {
   align-content: center;
 }
 
-#skill-spotlight-title {
+#project-spotlight-title {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -41,22 +41,22 @@ export default {
   font-size: 1.2em;
 }
 
-#skill-bullet-container {
+#project-bullet-container {
   width: 80%;
   margin: 0 auto;
   text-align: left;
   padding: 0 20px;
 }
 
-.skill-bullet {
+.project-bullet {
   padding: 5px 0px;
 }
 
-.skill-bullet::before {
+.project-bullet::before {
   content: "- ";
 }
 
-.skill-bullet:first-of-type {
+.project-bullet:first-of-type {
   padding-top: 15px;
 }
 </style>

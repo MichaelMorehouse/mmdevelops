@@ -5,6 +5,7 @@
     <div class="item3">
       <about-me-container></about-me-container>
       <skill-container></skill-container>
+      <project-container></project-container>
       <contact-container></contact-container>
     </div>
     <page-footer class="item4"></page-footer>
@@ -17,6 +18,7 @@ import PageHeader from './components/layout/PageHeader.vue'
 import PageFooter from './components/layout/PageFooter.vue'
 import NavigationBar from './components/ui/NavigationBar.vue'
 import ContactContainer from './components/ContactContainer.vue'
+import ProjectContainer from './components/ProjectContainer.vue'
 import AboutMeContainer from './components/AboutMeContainer.vue'
 
 export default {
@@ -27,6 +29,7 @@ export default {
     NavigationBar,
     AboutMeContainer,
     SkillContainer,
+    ProjectContainer,
     ContactContainer
   }
 }

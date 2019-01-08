@@ -1,22 +1,21 @@
 <template>
-    <div class="skill-item" v-on:click="$emit('activate-skill')" :class="isActive ? 'active-skill' : ''">
-        <div class="skill-title">{{ skill.name }}</div>
-        <div v-if="skill.icon">
-            <img class="skill-icon" :src="require('@/assets/' + skill.icon)" alt="I'm missing!" >
+    <div class="project-item" v-on:click="$emit('activate-project')" :class="isActive ? 'active-project' : ''">
+        <div class="project-title">{{ project.name }}</div>
+        <div v-if="project.icon">
+            <img class="project-icon" :src="require('@/assets/' + project.icon)" alt="I'm missing!" >
         </div>
     </div>
 </template>
 
 <script>
-
 export default {
-    name: 'skill-item',
+    name: 'project-item',
     data: function() {
         return {
         }
     },
     props: {
-        skill: {
+        project: {
             name: String,
             bullets: Array,
         },
@@ -26,8 +25,7 @@ export default {
 </script>
 
 <style>
-
-    .skill-item {
+    .project-item {
         padding: 10px 10px;
         border: 1px solid  rgb(44, 62, 80, .4);
         border-radius: 2px 2px 10px 2px;
@@ -36,7 +34,7 @@ export default {
         box-shadow:         1px 1px 0px 0px rgba(44, 62, 80, 0.4);
     }
 
-    .skill-item:hover {
+    .project-item:hover {
         border-color: rgb(44, 62, 80, .6); 
         cursor: pointer;
         -webkit-box-shadow: 1px 2px 1px 0px rgba(44, 62, 80, 0.6);
@@ -44,12 +42,12 @@ export default {
         box-shadow:         1px 2px 1px 0px rgba(44, 62, 80, 0.6);
     }
 
-    .skill-item:not(.active-skill):hover {
+    .project-item:not(.active-project):hover {
         border-color: rgb(44, 62, 80);
     }
 
-    /* Skill title styles */
-    .skill-title {
+    /* Project title styles */
+    .project-title {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,20 +56,19 @@ export default {
         min-height: 2.5em;
     }
 
-    /* Skill icon styles */
+    /* Project icon styles */
 
-    .skill-icon {
+    .project-icon {
         max-width: 70%;
         padding: 20px 10px;
         opacity: .5;
     }
 
-    .skill-item:not(.active-skill):hover .skill-icon {
+    .project-item:not(.active-project):hover .project-icon {
         opacity: .8;
     }
 
-    .active-skill .skill-icon {
+    .active-project .project-icon {
         opacity: 1;
     }
-    
 </style>
