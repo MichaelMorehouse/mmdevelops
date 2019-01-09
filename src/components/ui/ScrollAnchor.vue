@@ -7,8 +7,8 @@ export default {
   name: "scroll-anchor",
   props: {
     id: String,
-    top: Number,
-    left: Number
+    top: String,
+    left: String
   }
 };
 </script>

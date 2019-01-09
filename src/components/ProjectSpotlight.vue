@@ -2,7 +2,7 @@
   <div id="project-spotlight">
     <div id="project-spotlight-title">{{ project.name }}</div>
     <div id="project-bullet-container">
-      <div v-for="(bullet, index) in project.bullets" :key="index" class="project-bullet">{{ bullet }}</div>
+      <div v-for="(bullet, index) in project.bullets" :key="index" class="project-bullet" v-html="bullet"></div>
     </div>
   </div>
 </template>

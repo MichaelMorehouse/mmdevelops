@@ -38,7 +38,8 @@ export default {
           name: "Positive Team Presence",
           bullets: [
             "Passion for learning and sharing knowledge",
-            "Effective communication and diligent follow-through"
+            "Effective communication and diligent follow-through",
+            "Responsible, accountable, and straightforward"
           ],
           icon: "team.png"
         },
@@ -54,7 +55,7 @@ export default {
         {
           name: "Documentation Expert",
           bullets: [
-            "Quick and consistent implementation of standard procedures and best practices",
+            "Consistent implementation of standard procedures and industry best practices",
             "Proficient at assembling solutions from documentation, articles and posts"
           ],
           icon: "docu.png"
@@ -100,7 +101,6 @@ export default {
   },
   watch: {
     activeSkill: function() {
-      console.log("frrrrt");
       document.getElementById("skill-anchor").scrollIntoView();
     }
   }

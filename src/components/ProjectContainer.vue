@@ -8,13 +8,13 @@
         :class="'project' + (index + 1)"
         :project="project"
         :isActive="project == activeProject"
-        v-on:activate-project="activeProject = project"
+        v-on:activate-project="activateProject(project)"
       />
     </div>
+    <scroll-anchor id="project-anchor" top="0" left="0"/>
     <transition name="fade">
       <project-spotlight v-if="projectsExist()" :project="activeProject"></project-spotlight>
     </transition>
-    <scroll-anchor id="project-anchor" top="-100" left="0"/>
   </div>
 </template>
 
@@ -38,7 +38,8 @@ export default {
           name: "PDXPrivacy Website - HTML/CSS",
           bullets: [
             "Home on the web for a Portland-area privacy activism group",
-            "Site purposefully built entirely without scripting - HTML/CSS only"
+            "Site purposefully built entirely without scripting - HTML/CSS only",
+            "<a href='http://pdxprivacy.mmdevelops.com' target='_blank'>Visit the site</a>"
           ],
           icon: "pdxp.png"
         },
@@ -46,8 +47,8 @@ export default {
           name: "MushBox - Arduino/Node",
           bullets: [
             "Controlled environment for growing edible mushrooms at home",
-            "Temperature and humidity monitored and controlled by an Arduino microcontroller with C++ firmware",
-            "A NodeJS web API logs environment data posted by microcontroller to a PostgreSQL database"
+            "Temperature and humidity monitored and controlled by an Arduino microcontroller with C++ firmware. <a href='https://github.com/MichaelMorehouse/MushBox-firmware' target='_blank'>View code at Github</a>",
+            "A NodeJS web API logs environment data posted by microcontroller to a PostgreSQL database. <a href='https://github.com/MichaelMorehouse/MushBox-api' target='_blank'>View code at Github</a>"
           ],
           icon: "mush.png"
         }
@@ -60,11 +61,9 @@ export default {
         this.activeProject = this.projects[0];
       }
       return this.activeProject ? true : false;
-    }
-  },
-  watch: {
-    activeSkill: function() {
-      console.log("frrrrt");
+    },
+    activateProject: function(project) {
+      this.activeProject = project;
       document.getElementById("project-anchor").scrollIntoView();
     }
   }

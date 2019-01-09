@@ -2,6 +2,7 @@
   <header>
     <img class="splash-image" src="../../assets/profile.png">
     <div class="header-text text-uppercase text-centered">Michael M Miller</div>
+    <div class="text-uppercase">Software Developer - Data Analyst</div>
     <div id="header-icons">
       <font-awesome-icon :icon="['fas', 'code-branch']" size="2x"></font-awesome-icon>
       <div class="horizontal-row"></div>
@@ -20,7 +21,7 @@ export default {
 
 <style>
 header {
-  background-color: rgba(45, 100, 45, 0.9);
+  background-color:rgb(44, 62, 80, .9);;
   color: white;
   align-content: center;
   text-align: center;
@@ -35,8 +36,9 @@ header {
 }
 
 .header-text {
-  font-size: 1.6em;
+  font-size: 1.8em;
   padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 .splash-image {

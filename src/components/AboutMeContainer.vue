@@ -4,14 +4,18 @@
     <div class="about-grid">
       <div class="col-one">
         <p>
-          <span class="leadin-text">Super great guy.</span>
-            Just the best wow. You're going to be working with this fellow like "Oh man what a great co-worker, this job might be slowly sapping my will to live but at least I get to hang out with such great people that delay my inevitable reduction to a sad sack of cynicism incapable of happiness." What a guy.
+          <span class="leadin-text">Hello there, I'm Michael!</span>
+          As a Pacific Northwest native, I graduated cum laude from Western Washington University with a BS in Biochemistry. After returning to the Portland area I worked as an analytical chemist in QC and environmental testing laboratories. Being successful in such work requires efficient time management, team communication, and a dedication to doing the job well.
         </p>
-        <p>Umami mixtape palo santo mumblecore roof party. Ad veniam banh mi cloud bread unicorn laboris YOLO minim affogato ut keffiyeh echo park. Tempor 90's brunch heirloom readymade occupy poke franzen. Beard everyday carry taiyaki scenester dreamcatcher cupidatat before they sold out thundercats knausgaard pickled hell of. Est incididunt next level tofu truffaut nulla neutra. Wolf kinfolk flexitarian, chartreuse tilde aliqua non bushwick pork belly cloud bread normcore ut. Tumblr ullamco pariatur bitters literally plaid.</p>
+        <p>
+           I was introduced to programming through a position developing analytical testing methods. We had adopted an SQL database based program to manage, analyse and report our data. After diving into SQL so that I could successfully develop and validate our laboratories methods, I discovered a interest in programming, and continued learning SQL and JavaScript independently for a time. My interest continued to grow, and it led me to explore options for a career change. Attending a local accelerated programming school was a good option, and I attended the Tech Academy in Portland in 2018.
+        </p>
       </div>
       <div class="col-two">
-        <p>Bitters est et brunch officia freegan dolore shaman church-key drinking vinegar enim tacos bushwick. Cupidatat distillery locavore, thundercats marfa velit occupy retro aesthetic celiac glossier. Godard tattooed kickstarter, etsy franzen commodo artisan pok pok kitsch. Portland sint pok pok non photo booth normcore. Freegan YOLO yuccie green juice in. Before they sold out poke tofu, put a bird on it brooklyn cardigan hammock four dollar toast hoodie.</p>
-        <p>And if you think that's all great, I also like to cook! The wonders never cease</p>
+        <p>
+          My focus is C# and .NET development, and Javascript, including Node and the frontend frameworks React and Vue. I have a firm grasp of object oriented programming principles and additional experience in C++ and Java. As I scientist I enjoy data analysis and effectively presenting data and information, and am excited to combine that passion with software development. I am a lifelong learner who is comfortable working independently but prefers working in small teams. An effective team environment promotes sharing of knowledge and expertise, and collaborative problem solving to the benefit of everyone. I enjoy building, being a part of, and leading such teams.
+        </p>
+        <p>On top of all that, I love to cook, and would be a welcome addition to any office potluck! If you're interested in having me join your team, please contact me via the methods below.</p>
       </div>
     </div>
   </div>
