@@ -12,7 +12,7 @@
         :class="'skill' + (index + 1)"
         :skill="skill"
         :isActive="skill == activeSkill"
-        v-on:activate-skill="activeSkill = skill"
+        v-on:activate-skill="activeSkill(skill)"
       />
     </div>
   </div>
@@ -97,13 +97,12 @@ export default {
         this.activeSkill = this.skills[0];
       }
       return this.activeSkill ? true : false;
-    }
-  },
-  watch: {
-    activeSkill: function() {
+    },
+    activateSkill: function(skill) {
+      this.activeSkill = skill;
       document.getElementById("skill-anchor").scrollIntoView();
     }
-  }
+  },
 };
 </script>
 
