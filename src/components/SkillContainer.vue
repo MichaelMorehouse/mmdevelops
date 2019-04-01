@@ -12,7 +12,7 @@
         :class="'skill' + (index + 1)"
         :skill="skill"
         :isActive="skill == activeSkill"
-        v-on:activate-skill="activeSkill(skill)"
+        v-on:activate-skill="activateSkill(skill)"
       />
     </div>
   </div>
