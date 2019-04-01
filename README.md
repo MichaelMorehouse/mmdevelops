@@ -1,21 +1,5 @@
 # mmdevelops
 
-## Project setup
-```
-yarn install
-```
+My personal portfolio site, built with Vue.js.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+Visit [mmdevelops.com](https://mmdevelops.com) to view the live site.
